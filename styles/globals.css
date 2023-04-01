@@ -59,6 +59,10 @@ button:hover {
   background: var(--main-button-color);
   border: none;
   padding: 1.25rem;
+  font-size: 0.875rem;
+}
+.default-text {
+  font-size: 1rem;
 }
 .nav-container {
   display: flex;
@@ -520,7 +524,7 @@ a:hover {
     flex-wrap: wrap;
     width: 50vw;
     gap: 0.625rem;
-    padding: 0.3125rem 0.625rem;
+    padding: 0.625rem 0.625rem;
   }
   .projects-section__projects__project__btn {
     display: flex;
