@@ -1,3 +1,9 @@
+:root {
+  --space-between-each-section: 2.5rem;
+  --space-between-section-child: 20px;
+  --main-button-color: hsl(120, 95%, 30%);
+}
+
 @font-face {
   font-family: montserrat;
   src: url('../public/Montserrat-Regular.ttf');
@@ -43,12 +49,22 @@ button:hover {
     border-color: transparent;
   }
 }
+.section-spacing {
+  margin-top: var(--space-between-each-section);
+}
+.child-spacing {
+  margin-top: var(--space-between-section-child);
+}
+.default-btn {
+  background: var(--main-button-color);
+  border: none;
+  padding: 1.25rem;
+}
 .nav-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 2rem;
-  margin-top: 0.625rem;
 }
 
 .nav-links-container {
@@ -123,7 +139,7 @@ button:hover {
   grid-template-areas:
     'main-intro fading-text'
     'contact-btn empty';
-  margin-top: 1.25rem;
+
   justify-content: space-between;
   align-items: center;
   width: 78vw;
@@ -146,7 +162,6 @@ button:hover {
     'about about'
     'about-desc my-img'
     'github-button my-img';
-  margin-block: 2rem;
   padding: 2rem;
   justify-content: start;
   gap: 0.625rem;
@@ -178,12 +193,11 @@ button:hover {
   grid-row: 1/4;
 }
 .skills-section {
-  margin-top: 2.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   width: 70vw;
-  margin: 2rem;
+  margin-inline: 2rem;
 }
 .skills-section__title {
   font-weight: bold;
@@ -213,7 +227,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin-top: 1.25rem;
+
   background-color: hsl(210, 95%, 3%);
   gap: 0.625rem;
   padding: 2rem;
@@ -286,12 +300,11 @@ button:hover {
 }
 .contact-section {
   display: flex;
-  margin-top: 1.875rem;
+
   flex-direction: column;
   align-items: start;
   gap: 0.625rem;
-  margin: 2rem;
-  margin-bottom: 0;
+  margin-inline: 2rem;
 }
 .contact-section__title {
   font-weight: bold;
@@ -304,8 +317,9 @@ button:hover {
   background-color: hsl(120, 95%, 30%);
   border: none;
   color: white;
-  padding: 0.625rem 0.9375rem;
-  font-size: 1rem;
+  padding: 0.9375rem;
+  font-size: 1.125rem;
+  margin-top: 0.9375rem;
 }
 .contact-section__btn:hover {
   background-color: hsl(120, 95%, 15%);
@@ -317,6 +331,7 @@ button:hover {
   gap: 0.625rem;
   justify-content: center;
   align-self: center;
+  margin-top: 0.625rem;
 }
 .contact-section__social-media-links__link {
   display: flex;
@@ -354,9 +369,6 @@ a:hover {
   background-color: hsl(210, 95%, 15%);
 }
 @media screen and (max-width: 900px) {
-  body {
-    margin: 0;
-  }
   * {
     margin: 0;
     padding: 0;
@@ -407,7 +419,7 @@ a:hover {
     margin: 0;
     padding: 0;
     align-items: center;
-    margin-top: 1.875rem;
+    margin-top: var(--space-between-each-section);
     flex-direction: column;
     gap: 1.25rem;
     width: 100%;
@@ -417,7 +429,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     gap: 0.625rem;
-    margin-top: 1.875rem;
+    margin-top: var(--space-between-each-section);
     background-color: hsl(210, 95%, 3%);
     padding: 0.625rem;
     padding-block: 1rem;
@@ -440,11 +452,10 @@ a:hover {
     padding: 0;
     flex-direction: column;
     align-items: center;
-    gap: 0.625rem;
-    margin-top: 1.875rem;
+    gap: var(--space-between-section-child);
+    margin-top: var(--space-between-each-section);
     width: 100%;
     flex-wrap: wrap;
-    margin: 0;
   }
   .skills-section__title,
   .skills-section__desc {
@@ -485,10 +496,10 @@ a:hover {
     padding: 0;
     flex-direction: column;
     align-items: center;
-    margin-top: 1.25rem;
+    margin-top: var(--space-between-each-section);
     background-color: hsl(210, 95%, 3%);
-    gap: 0.625rem;
-    padding-block: 1rem;
+    gap: var(--space-between-section-child);
+    padding-block: var(--space-between-section-child);
   }
   .projects-section__tags {
     display: flex;
@@ -550,15 +561,13 @@ a:hover {
     text-align: center;
   }
   .contact-section__btn {
-    background-color: hsl(120, 95%, 30%);
-    border: none;
-    color: white;
-    padding: 0.3125rem 0.625rem;
+    margin-top: var(--space-between-section-child);
   }
   .contact-section__social-media-links {
     display: flex;
     flex-wrap: wrap;
     gap: 0.625rem;
+    margin-top: var(--space-between-section-child);
   }
   .contact-section__social-media-links__link {
     background-color: hsl(120, 95%, 30%);

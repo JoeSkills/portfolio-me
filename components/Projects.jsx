@@ -34,7 +34,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="projects-section" id="My Projects">
+    <div className="projects-section section-spacing" id="My Projects">
       <span className="projects-section__title">My Projects</span>
       <div className="projects-section__tags">
         {['Show All', 'React', 'NextJs', 'Plain Js', 'Games'].map(
