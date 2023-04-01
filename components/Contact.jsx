@@ -4,7 +4,7 @@ import { FaFacebookF, FaWhatsapp } from 'react-icons/fa';
 const Contact = () => {
   return (
     <div className="contact-section section-spacing" id="Contact">
-      <span className="contact-section__title">Get In Touch</span>
+      <span className="contact-section__title">Say Hi😀</span>
       <div className="contact-section__desc">
         I’m always open to discussing web design or web development related
         topics.

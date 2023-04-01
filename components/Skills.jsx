@@ -16,7 +16,7 @@ const Skills = () => {
 
   return (
     <div className="skills-section section-spacing" id="My Skills">
-      <span className="skills-section__title">My Skills</span>
+      <span className="skills-section__title">What Can I do💪</span>
       <div className="skills-section__desc">
         From HTML & CSS to Next.Js, React.JS, MongoDB and Node.JS. Check out the
         skills I've attained in web development.
