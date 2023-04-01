@@ -8,11 +8,12 @@ const Header = () => {
 
   const handleMenuToggle = () => {
     navRef.current.classList.toggle('responsive-nav');
-    if (showMenu === false) {
-      setShowMenu(true);
-    } else {
-      setShowMenu(false);
-    }
+    setShowMenu(() => !showMenu);
+  };
+
+  const handleMenuChildToggle = () => {
+    setShowMenu(() => !showMenu);
+    navRef.current.classList.toggle('responsive-nav');
   };
 
   return (
@@ -42,7 +43,12 @@ const Header = () => {
             {['About Me', 'My Projects', 'My Skills', 'Contact'].map(
               (item, index) => {
                 return (
-                  <a href={`#${item}`} className="nav-links-child" key={index}>
+                  <a
+                    href={`#${item}`}
+                    className="nav-links-child"
+                    key={index}
+                    onClick={handleMenuChildToggle}
+                  >
                     {' '}
                     {item}
                   </a>
