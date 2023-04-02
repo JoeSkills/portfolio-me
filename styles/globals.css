@@ -4,11 +4,7 @@
   --space-between-each-section: 4.375rem;
   --space-between-section-child: 1.25rem;
   --main-button-color: hsl(120, 95%, 30%);
-}
-
-@font-face {
-  font-family: montserrat;
-  src: url('../public/Montserrat-Regular.ttf');
+  --secondary-button-color: hsl(120, 95%, 15%);
 }
 
 * {
@@ -33,7 +29,6 @@ body {
 button:hover {
   cursor: pointer;
   transform: translate(0, 2px);
-  background-color: hsl(120, 95%, 20%);
 }
 @keyframes typing {
   from {
@@ -56,12 +51,6 @@ button:hover {
 }
 .child-spacing {
   margin-top: var(--space-between-section-child);
-}
-.default-btn {
-  background: var(--main-button-color);
-  border: none;
-  padding: 1.25rem;
-  font-size: 0.875rem;
 }
 .nav-container {
   display: flex;
@@ -105,14 +94,14 @@ button:hover {
 
 .contact-me-btn {
   border: none;
-  background-color: hsl(120, 95%, 30%);
+  background-color: var(--main-button-color);
   color: white;
   width: fit-content;
   padding: 0.625rem 0.9375rem;
   font-size: 1rem;
 }
 .contact-me-btn:hover {
-  background-color: hsl(120, 95%, 15%);
+  background-color: var(--secondary-button-color);
 }
 .fading-text {
   width: min-content;
@@ -131,7 +120,7 @@ button:hover {
   border: none;
 }
 .btn--green {
-  background-color: hsl(120, 95%, 30%);
+  background-color: var(--main-button-color);
   color: white;
 }
 .nav-btn {
@@ -187,7 +176,7 @@ button:hover {
   align-self: self-end;
 }
 .about-btn-github:hover {
-  background-color: hsl(120, 95%, 15%);
+  background-color: var(--secondary-button-color);
 }
 .my-img.about {
   width: 100%;
@@ -261,7 +250,7 @@ button:hover {
   display: flex;
   gap: 0.625rem;
   flex-wrap: wrap;
-  background-color: hsl(120, 95%, 30%);
+  background-color: var(--main-button-color);
   border: none;
   color: white;
   padding: 0.3125rem 0.625rem;
@@ -317,7 +306,7 @@ button:hover {
   text-align: left;
 }
 .contact-section__btn {
-  background-color: hsl(120, 95%, 30%);
+  background-color: var(--main-button-color);
   border: none;
   color: white;
   padding: 0.9375rem;
@@ -325,7 +314,7 @@ button:hover {
   margin-top: 0.9375rem;
 }
 .contact-section__btn:hover {
-  background-color: hsl(120, 95%, 15%);
+  background-color: var(--secondary-button-color);
   transform: translate(0, 3px);
 }
 .contact-section__social-media-links {
@@ -338,14 +327,14 @@ button:hover {
 }
 .contact-section__social-media-links__link {
   display: flex;
-  justify-content: center;
-  background-color: hsl(120, 95%, 30%);
+  align-items: center;
+  background-color: var(--main-button-color);
   border: none;
   color: white;
   padding: 0.3125rem 0.625rem;
 }
 .contact-section__social-media-links__link:hover {
-  background-color: hsl(120, 95%, 15%);
+  background-color: var(--secondary-button-color);
   cursor: pointer;
   transform: translate(0, 2px);
 }
@@ -378,11 +367,13 @@ a:hover {
   }
   .logo {
     font-size: 1.25rem;
+    font-weight: bolder;
   }
   .nav-container {
     margin: 0;
     padding: 0;
     margin-top: 0.3125rem;
+    padding-inline: 0.625rem;
   }
   .nav-links-container {
     flex-direction: column;
@@ -530,7 +521,7 @@ a:hover {
     gap: 0.625rem;
   }
   .projects-section__projects__project__btn__btn {
-    background-color: hsl(120, 95%, 30%);
+    background-color: var(--main-button-color);
     border: none;
     color: white;
     padding: 0.3125rem 0.625rem;
@@ -573,7 +564,7 @@ a:hover {
     margin-top: var(--space-between-section-child);
   }
   .contact-section__social-media-links__link {
-    background-color: hsl(120, 95%, 30%);
+    background-color: var(--main-button-color);
     border: none;
     color: white;
     padding: 0.3125rem 0.625rem;
