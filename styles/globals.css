@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
 :root {
-  --space-between-each-section: 2.5rem;
-  --space-between-section-child: 20px;
+  --space-between-each-section: 4.375rem;
+  --space-between-section-child: 1.25rem;
   --main-button-color: hsl(120, 95%, 30%);
 }
 
@@ -12,7 +14,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: montserrat, sans-serif;
+  font-family: Jost, sans-serif;
 }
 
 a {
@@ -580,6 +582,7 @@ a:hover {
     font-weight: bold;
     margin-top: 0.625rem;
     text-align: center;
+    font-size: 0.75rem;
   }
   .nav-btn {
     display: block;
