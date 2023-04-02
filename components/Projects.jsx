@@ -8,6 +8,16 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [projectFilter, setProjectFilter] = useState([]);
   const [projectActiveFilter, setProjectActiveFilter] = useState('Show All');
+  const NoProject = () => {
+    return <span>Sorry😔 I Forgot To Add A Project👨‍💻 For This Category</span>;
+  };
+  const projectCategories = [
+    'Show All',
+    'React',
+    'NextJs',
+    'Plain Js',
+    'Games',
+  ];
 
   useEffect(() => {
     const query = '*[_type == "projects"]';
@@ -37,58 +47,60 @@ const Projects = () => {
     <div className="projects-section section-spacing" id="My Projects">
       <span className="projects-section__title">Here's Some Of My Work👨‍💻</span>
       <div className="projects-section__tags">
-        {['Show All', 'React', 'NextJs', 'Plain Js', 'Games'].map(
-          (item, index) => {
-            return (
-              <span
-                className={`projects-section__tags__tag${
-                  projectActiveFilter === item ? ' tag--active' : ''
-                }`}
-                key={index}
-                onClick={() => handleProjectFilter(item)}
-              >
-                {item}
-              </span>
-            );
-          }
-        )}
-      </div>
-      <div className="projects-section__projects">
-        {projectFilter?.map((project, index) => {
+        {projectCategories.map((item, index) => {
           return (
-            <div className="projects-section__projects__project" key={index}>
-              <img
-                src={urlFor(project.imgUrl)}
-                width="50"
-                height="50"
-                className="projects-section__projects__project__image"
-              />
-              <span className="projects-section__projects__project__title">
-                {project.title}
-              </span>
-              <span className="projects-section__projects__project__desc">
-                {project.description}
-              </span>
-
-              <div className="projects-section__projects__project__btn">
-                <a
-                  className="projects-section__projects__project__btn__btn btn--live"
-                  href={project.projectLink}
-                >
-                  <FaLink className="projects-section__projects__project__btn__link-logo" />
-                  <span>Live Demo</span>
-                </a>
-                <a
-                  className="projects-section__projects__project__btn__btn btn--github"
-                  href={project.codeLink}
-                >
-                  <FaGithub className="projects-section__projects__project__btn__github-logo" />
-                  <span>Github</span>
-                </a>
-              </div>
-            </div>
+            <span
+              className={`projects-section__tags__tag${
+                projectActiveFilter === item ? ' tag--active' : ''
+              }`}
+              key={index}
+              onClick={() => handleProjectFilter(item)}
+            >
+              {item}
+            </span>
           );
         })}
+      </div>
+      <div className="projects-section__projects">
+        {projectFilter.length ? (
+          projectFilter?.map((project, index) => {
+            return (
+              <div className="projects-section__projects__project" key={index}>
+                <img
+                  src={urlFor(project.imgUrl)}
+                  width="50"
+                  height="50"
+                  className="projects-section__projects__project__image"
+                />
+                <span className="projects-section__projects__project__title">
+                  {project.title}
+                </span>
+                <span className="projects-section__projects__project__desc">
+                  {project.description}
+                </span>
+
+                <div className="projects-section__projects__project__btn">
+                  <a
+                    className="projects-section__projects__project__btn__btn btn--live"
+                    href={project.projectLink}
+                  >
+                    <FaLink className="projects-section__projects__project__btn__link-logo" />
+                    <span>Live Demo</span>
+                  </a>
+                  <a
+                    className="projects-section__projects__project__btn__btn btn--github"
+                    href={project.codeLink}
+                  >
+                    <FaGithub className="projects-section__projects__project__btn__github-logo" />
+                    <span>Github</span>
+                  </a>
+                </div>
+              </div>
+            );
+          })
+        ) : (
+          <NoProject />
+        )}
       </div>
     </div>
   );

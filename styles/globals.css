@@ -46,6 +46,14 @@ button:hover {
     border-color: transparent;
   }
 }
+.loading-screen-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(210, 95%, 5%);
+}
 .section-spacing {
   margin-top: var(--space-between-each-section);
 }
@@ -57,6 +65,8 @@ button:hover {
   flex-direction: row;
   justify-content: space-between;
   margin: 2rem;
+  margin-top: 0.625rem;
+  align-items: start;
 }
 
 .nav-links-container {

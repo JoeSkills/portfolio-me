@@ -1,11 +1,24 @@
 import '@/styles/globals.css';
-import { Header } from '../components/';
+import { useEffect, useState } from 'react';
+import { Header, LoadingScreen } from '../components/';
 
 export default function App({ Component, pageProps }) {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(true), 3000);
+  });
+
   return (
     <>
-      <Header></Header>
-      <Component {...pageProps} />
+      {loading ? (
+        <>
+          <Header></Header>
+          <Component {...pageProps} />
+        </>
+      ) : (
+        <LoadingScreen />
+      )}
     </>
   );
 }

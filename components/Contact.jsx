@@ -39,7 +39,7 @@ const Contact = () => {
         </span>{' '}
         &{' '}
         <span className="contact-section__design-credits__tech-credits">
-          Framer Motion
+          Vercel
         </span>
       </div>
     </div>
