@@ -360,6 +360,12 @@ a:hover {
 .tag--active {
   background-color: hsl(210, 95%, 15%);
 }
+.contact-section__design-credits__tech-credits:hover {
+  cursor: pointer;
+  color: hsl(210, 80%, 40%);
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 900px) {
   * {
     margin: 0;
@@ -483,6 +489,7 @@ a:hover {
   .projects-section__title {
     font-weight: 600;
     font-size: 1.25rem;
+    text-align: center;
   }
   .projects-section {
     display: flex;

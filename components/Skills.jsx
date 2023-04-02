@@ -18,8 +18,8 @@ const Skills = () => {
     <div className="skills-section section-spacing" id="My Skills">
       <span className="skills-section__title">What Can I do💪</span>
       <div className="skills-section__desc">
-        From HTML & CSS to Next.Js, React.JS, MongoDB and Node.JS. Check out the
-        skills I've attained in web development.
+        From HTML & CSS🥱 to Next.Js🔥, React.JS, MongoDB and Node.JS. Check out
+        some the skills🎯 I've attained in web development.
       </div>
       <div className="skills-section__tech-logos">
         {skills.map((skill, index) => {

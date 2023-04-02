@@ -32,7 +32,15 @@ const Contact = () => {
         </a>
       </div>
       <div className="contact-section__design-credits">
-        Designed & Built By Joseph Oritseweyinmi
+        Designed & Built👷 By Joseph Oritseweyinmi with
+        <span className="contact-section__design-credits__tech-credits">
+          {' '}
+          NextJs
+        </span>{' '}
+        &{' '}
+        <span className="contact-section__design-credits__tech-credits">
+          Framer Motion
+        </span>
       </div>
     </div>
   );
