@@ -1,25 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import Typewriter from 'typewriter-effect';
 
 const Intro = () => {
-  const [text, setText] = useState();
-  const [fullText, setFullText] = useState([
-    'Web Developer',
-    'Web Development Hobbyist',
-    'Student',
-  ]);
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    if (index < fullText.length) {
-      setTimeout(() => {
-        setText(fullText[index]);
-        setIndex(index + 1);
-      }, 4000);
-    } else {
-      setIndex(0);
-    }
-  }, [index]);
-
   return (
     <div className="intro-container">
       <div className="main-intro">
@@ -36,7 +18,13 @@ const Intro = () => {
         Contact Me
       </a>
       <div className="fading-text">
-        <div className="fading-text__text">{text}</div>
+        <Typewriter
+          options={{
+            strings: ['Web Developer', 'Web Development Hobbyist', 'Student'],
+            autoStart: true,
+            loop: true,
+          }}
+        />
       </div>
     </div>
   );

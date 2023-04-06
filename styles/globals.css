@@ -30,22 +30,6 @@ button:hover {
   cursor: pointer;
   transform: translate(0, 2px);
 }
-@keyframes typing {
-  from {
-    flex: 0;
-  }
-  to {
-    flex: 1;
-  }
-}
-@keyframes blinkingCursor {
-  from {
-    border-color: white;
-  }
-  to {
-    border-color: transparent;
-  }
-}
 .loading-screen-container {
   width: 100vw;
   height: 100vh;
@@ -83,7 +67,7 @@ button:hover {
   height: 0.1875rem;
   bottom: 0;
   left: 0;
-  background-color: #0087ca;
+  background-color: hsl(210, 95%, 30%);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -115,15 +99,8 @@ button:hover {
 }
 .fading-text {
   width: min-content;
-
   font-size: 0.875rem;
   display: flex;
-}
-.fading-text__text {
-  animation: typing 4s steps(40) 1s infinite normal,
-    blinkingCursor 0.5s steps(40) 1s infinite normal;
-  overflow: hidden;
-  border-right: 2px solid black;
 }
 .btn {
   padding: 0.625rem 1.25rem;
@@ -264,6 +241,7 @@ button:hover {
   border: none;
   color: white;
   padding: 0.3125rem 0.625rem;
+  align-items: center;
 }
 .projects-section__projects__project__btn__btn:hover {
   background-color: hsl(120, 95%, 20%);
@@ -362,7 +340,7 @@ button:hover {
   cursor: pointer;
 }
 .social--whatsapp {
-  gap: 0.3125rem;
+  gap: 0.25rem;
 }
 a:hover {
   transform: translate(0, 2px);

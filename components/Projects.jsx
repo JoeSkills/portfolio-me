@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { client, urlFor } from '@/client';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLink } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
+import { FiExternalLink } from 'react-icons/fi';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -84,7 +85,7 @@ const Projects = () => {
                     className="projects-section__projects__project__btn__btn btn--live"
                     href={project.projectLink}
                   >
-                    <FaLink className="projects-section__projects__project__btn__link-logo" />
+                    <FiExternalLink className="projects-section__projects__project__btn__link-logo" />
                     <span>Live Demo</span>
                   </a>
                   <a
