@@ -35,7 +35,7 @@ const Contact = () => {
         Designed & Built👷 By Joseph Oritseweyinmi with
         <span className="contact-section__design-credits__tech-credits">
           {' '}
-          NextJs
+          NextJs⚡
         </span>{' '}
         &{' '}
         <span className="contact-section__design-credits__tech-credits">

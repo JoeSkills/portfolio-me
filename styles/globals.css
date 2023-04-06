@@ -351,7 +351,6 @@ a:hover {
 .contact-section__design-credits__tech-credits:hover {
   cursor: pointer;
   color: hsl(210, 80%, 40%);
-  text-decoration: underline;
 }
 
 @media screen and (max-width: 900px) {
