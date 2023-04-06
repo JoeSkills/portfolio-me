@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { BiMenu } from 'react-icons/bi';
 import { FiX } from 'react-icons/fi';
 
@@ -11,10 +11,23 @@ const Header = () => {
     setShowMenu(() => !showMenu);
   };
 
-  const handleMenuChildToggle = () => {
-    setShowMenu(() => !showMenu);
-    navRef.current.classList.toggle('responsive-nav');
-  };
+  useEffect(() => {
+    const checkIfClickedOutside = (e) => {
+      // If the menu is open and the clicked target is not within the menu,
+      // then close the menu
+      if (showMenu && navRef.current && !navRef.current.contains(e.target)) {
+        navRef.current.classList.toggle('responsive-nav');
+        setShowMenu(false);
+      }
+    };
+
+    document.addEventListener('mousedown', checkIfClickedOutside);
+
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener('mousedown', checkIfClickedOutside);
+    };
+  }, [showMenu]);
 
   return (
     <div className="nav-container">
@@ -47,7 +60,7 @@ const Header = () => {
                     href={`#${item}`}
                     className="nav-links-child"
                     key={index}
-                    onClick={handleMenuChildToggle}
+                    onClick={handleMenuToggle}
                   >
                     {' '}
                     {item}
