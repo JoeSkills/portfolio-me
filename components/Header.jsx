@@ -40,7 +40,7 @@ const Header = () => {
       className="nav-container"
       style={{
         backgroundColor: `${
-          showMenu ? 'hsl(210, 95%, 8%)' : 'hsl(210, 95%, 10%)'
+          showMenu ? 'hsl(210, 95%, 8%)' : 'hsl(210, 95%, 5%)'
         }`,
       }}
     >

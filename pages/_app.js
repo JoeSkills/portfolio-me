@@ -1,6 +1,7 @@
 import '@/styles/globals.css';
 import { useEffect, useState } from 'react';
 import { Header, LoadingScreen } from '../components/';
+import Head from 'next/head';
 
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(false);
@@ -17,7 +18,12 @@ export default function App({ Component, pageProps }) {
           <Component {...pageProps} />
         </>
       ) : (
-        <LoadingScreen />
+        <>
+          <Head>
+            <meta name="theme-color" content="hsl(210, 95%, 5%)" />
+          </Head>
+          <LoadingScreen />
+        </>
       )}
     </>
   );

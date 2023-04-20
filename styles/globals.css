@@ -53,7 +53,7 @@ button:hover {
   position: sticky;
   top: 0;
   z-index: 5;
-  background-color: hsl(210, 95%, 10%);
+  background-color: hsl(210, 95%, 5%);
   padding: 2rem;
   padding-block: 0.625rem;
 }
@@ -391,7 +391,7 @@ a:hover {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: hsl(210, 95%, 10%);
+    background-color: hsl(210, 95%, 5%);
   }
   .nav-menu {
     display: flex;
