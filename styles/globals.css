@@ -25,6 +25,7 @@ button {
 body {
   background-color: hsl(210, 95%, 5%);
   color: white;
+  position: relative;
 }
 button:hover {
   cursor: pointer;
@@ -48,9 +49,13 @@ button:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 2rem;
-  margin-top: 0.625rem;
-  align-items: start;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: hsl(210, 95%, 10%);
+  padding: 2rem;
+  padding-block: 0.625rem;
 }
 
 .nav-links-container {
@@ -124,6 +129,7 @@ button:hover {
   width: 78vw;
   row-gap: 1.25rem;
   padding-inline: 2rem;
+  margin-top: 1.875rem;
 }
 .main-intro {
   font-size: 1.5rem;
@@ -358,35 +364,48 @@ a:hover {
     margin: 0;
     padding: 0;
   }
+
   .logo {
     font-size: 1.25rem;
     font-weight: bolder;
   }
   .nav-container {
     margin: 0;
-    padding: 0;
-    margin-top: 0.3125rem;
-    padding-inline: 0.625rem;
+    padding: 1.25rem;
   }
   .nav-links-container {
     flex-direction: column;
-    background-color: hsl(210, 95%, 3%);
     padding-block: 0.9375rem;
     padding-right: 0.625rem;
     padding-left: 0.625rem;
     font-size: 0.875rem;
     display: none;
+    width: 60vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.625rem;
   }
 
+  .nav-links-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: hsl(210, 95%, 10%);
+  }
   .nav-menu {
     display: flex;
     justify-content: right;
   }
+  .nav-btn {
+    margin-top: 0.9375rem;
+    margin-right: 1.25rem;
+  }
   .nav-links-child {
     padding-block: 0.3125rem;
-    padding-right: 1.875rem;
-    padding-left: 0.625rem;
+    padding-inline: 10px;
     border-radius: 0.3125rem;
+    font-size: 1.125rem;
   }
   .nav-links-child::after {
     display: none;
@@ -410,6 +429,9 @@ a:hover {
     flex-direction: column;
     gap: 1.25rem;
     width: 100%;
+  }
+  .fading-text {
+    text-align: center;
   }
   .about-section {
     display: flex;

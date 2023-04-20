@@ -8,6 +8,7 @@ const Header = () => {
 
   const handleMenuToggle = () => {
     navRef.current.classList.toggle('responsive-nav');
+
     setShowMenu(() => !showMenu);
   };
 
@@ -17,6 +18,11 @@ const Header = () => {
       // then close the menu
       if (showMenu && navRef.current && !navRef.current.contains(e.target)) {
         navRef.current.classList.toggle('responsive-nav');
+        const handleMenuToggle = () => {
+          navRef.current.classList.toggle('responsive-nav');
+
+          setShowMenu(() => !showMenu);
+        };
         setShowMenu(false);
       }
     };
@@ -30,7 +36,14 @@ const Header = () => {
   }, [showMenu]);
 
   return (
-    <div className="nav-container">
+    <div
+      className="nav-container"
+      style={{
+        backgroundColor: `${
+          showMenu ? 'hsl(210, 95%, 8%)' : 'hsl(210, 95%, 10%)'
+        }`,
+      }}
+    >
       <div className="logo">
         <a href="/"> Joseph</a>
       </div>
@@ -38,13 +51,13 @@ const Header = () => {
       <div className="nav-links-wrapper">
         {showMenu ? (
           <FiX
-            style={{ width: '30px', height: '30px' }}
+            style={{ width: '40px', height: '40px' }}
             onClick={handleMenuToggle}
             className="nav-btn nav-close-btn"
           />
         ) : (
           <BiMenu
-            style={{ width: '30px', height: '30px' }}
+            style={{ width: '40px', height: '40px' }}
             onClick={handleMenuToggle}
             className="nav-btn"
           />
