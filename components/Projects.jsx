@@ -10,7 +10,11 @@ const Projects = () => {
   const [projectFilter, setProjectFilter] = useState([]);
   const [projectActiveFilter, setProjectActiveFilter] = useState('Show All');
   const NoProject = () => {
-    return <span>Sorry😔 I Forgot To Add A Project👨‍💻 For This Category</span>;
+    return (
+      <span className="projects-section__projects__no-projects">
+        Sorry😔 I Forgot To Add A Project👨‍💻 For This Category
+      </span>
+    );
   };
   const projectCategories = [
     'Show All',

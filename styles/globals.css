@@ -437,11 +437,15 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.625rem;
+    gap: var(--space-between-section-child);
     margin-top: var(--space-between-each-section);
     background-color: hsl(210, 95%, 3%);
     padding: 0.625rem;
     padding-block: 1rem;
+  }
+  .about-body {
+    width: 100%;
+    text-align: center;
   }
   .about-btn-github {
     align-self: center;
@@ -552,6 +556,9 @@ a:hover {
   .projects-section__projects__project__image {
     width: 100%;
     height: 100%;
+  }
+  .projects-section__projects__no-projects {
+    text-align: center;
   }
   .contact-section {
     display: flex;
