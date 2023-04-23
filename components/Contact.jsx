@@ -25,7 +25,7 @@ const Contact = () => {
         </a>
         <a
           className="contact-section__social-media-links__link social--whatsapp"
-          href="mailto:josephoritseweyinmi5@gmail.com?subject=Hi, I Want To Talk To You"
+          href="https://wa.me/08128795195?text=Hi, I would like to talk to you"
         >
           <FaWhatsapp />
           <span>Whatsapp</span>
