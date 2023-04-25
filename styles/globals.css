@@ -103,7 +103,6 @@ button:hover {
   background-color: var(--secondary-button-color);
 }
 .fading-text {
-  width: min-content;
   font-size: 0.875rem;
   display: flex;
 }
