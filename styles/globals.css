@@ -184,8 +184,11 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  width: 70vw;
   margin-inline: 2rem;
+  align-items: center;
+}
+.skills-section__desc {
+  text-align: center;
 }
 .skills-section__title {
   font-weight: bold;
@@ -214,7 +217,7 @@ button:hover {
 .projects-section {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
 
   background-color: hsl(210, 95%, 3%);
   gap: 0.625rem;
@@ -233,7 +236,8 @@ button:hover {
   flex-wrap: wrap;
   width: 30vw;
   gap: 0.625rem;
-  padding: 0.3125rem 0.625rem;
+  padding: 0.9375rem 0.625rem;
+  padding-bottom: 0.9375rem;
   background-color: hsl(210, 95%, 10%);
   color: white;
   position: relative;
@@ -251,6 +255,7 @@ button:hover {
   color: white;
   padding: 0.3125rem 0.625rem;
   align-items: center;
+  text-align: center;
 }
 .projects-section__projects__project__btn__btn:hover {
   background-color: hsl(120, 95%, 20%);
@@ -261,6 +266,10 @@ button:hover {
 .projects-section__projects__project__title {
   font-weight: 600;
   font-size: 1rem;
+  text-align: center;
+}
+.projects-section__projects__project__title__link:hover {
+  color: hsl(210, 80%, 50%);
 }
 .projects-section__projects__project__image {
   width: 100%;
@@ -291,7 +300,7 @@ button:hover {
   display: flex;
 
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   gap: 0.625rem;
   margin-inline: 2rem;
 }

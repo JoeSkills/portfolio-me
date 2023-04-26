@@ -78,7 +78,12 @@ const Projects = () => {
                   className="projects-section__projects__project__image"
                 />
                 <span className="projects-section__projects__project__title">
-                  {project.title}
+                  <a
+                    href={project.projectLink}
+                    className="projects-section__projects__project__title__link"
+                  >
+                    {project.title}
+                  </a>
                 </span>
                 <span className="projects-section__projects__project__desc">
                   {project.description}
