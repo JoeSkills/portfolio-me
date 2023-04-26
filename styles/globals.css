@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
   --space-between-each-section: 4.375rem;
@@ -10,7 +10,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: Jost, sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 a {
