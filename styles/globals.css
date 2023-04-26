@@ -620,13 +620,18 @@ a:hover {
   .projects-section__projects__project {
     width: 70vw;
   }
-  .about-body,
+  .about-body {
+    border: 1px solid hsl(210, 95%, 30%);
+    width: 90%;
+    padding: 0.625rem;
+    background-color: hsl(210, 95%, 5%);
+  }
   .skills-section__desc,
   .contact-section__desc {
     border: 1px solid hsl(210, 95%, 30%);
     width: 90%;
     padding: 0.625rem;
-    background-color: hsl(210, 95%, 5%);
+    background-color: hsl(210, 95%, 7%);
   }
   .about-body:hover,
   .skills-section__desc:hover,
