@@ -5,7 +5,7 @@ import myImg from '../public/Ai-Avatar.png';
 const About = () => {
   return (
     <div className="about-section section-spacing" id="About Me">
-      <span className="heading about">Who Am I?🤔</span>
+      <span className="heading about">Who Am I ?🤔</span>
       <div className="about-body">
         I started my coding journey 4 years ago. I'm naturally curious🤔 and I'm
         always improving my web design skills. In my spare time I love watching

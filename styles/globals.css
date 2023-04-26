@@ -38,6 +38,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   background-color: hsl(210, 95%, 5%);
+  text-align: center;
 }
 .section-spacing {
   margin-top: var(--space-between-each-section);
@@ -96,8 +97,9 @@ button:hover {
   background-color: var(--main-button-color);
   color: white;
   width: fit-content;
-  padding: 0.625rem 0.9375rem;
+  padding: 0.625rem 1.25rem;
   font-size: 1rem;
+  font-weight: bold;
 }
 .contact-me-btn:hover {
   background-color: var(--secondary-button-color);
@@ -109,6 +111,8 @@ button:hover {
 .btn {
   padding: 0.625rem 1.25rem;
   border: none;
+  text-align: center;
+  font-weight: bold;
 }
 .btn--green {
   background-color: var(--main-button-color);
@@ -302,9 +306,10 @@ button:hover {
   background-color: var(--main-button-color);
   border: none;
   color: white;
-  padding: 0.9375rem;
+  padding: 0.625rem 1.25rem;
   font-size: 1.125rem;
   margin-top: 0.9375rem;
+  font-weight: bold;
 }
 .contact-section__btn:hover {
   background-color: var(--secondary-button-color);
@@ -358,7 +363,7 @@ a:hover {
   color: hsl(210, 80%, 40%);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
   * {
     margin: 0;
     padding: 0;
@@ -614,6 +619,19 @@ a:hover {
 @media screen and (max-width: 500px) {
   .projects-section__projects__project {
     width: 70vw;
+  }
+  .about-body,
+  .skills-section__desc,
+  .contact-section__desc {
+    border: 1px solid hsl(210, 95%, 30%);
+    width: 90%;
+    padding: 0.625rem;
+    background-color: hsl(210, 95%, 5%);
+  }
+  .about-body:hover,
+  .skills-section__desc:hover,
+  .contact-section__desc:hover {
+    border: 1px solid hsl(210, 95%, 25%);
   }
 }
 @media screen and (max-width: 550px) {
