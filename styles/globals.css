@@ -633,6 +633,9 @@ a:hover {
   .contact-section__desc:hover {
     border: 1px solid hsl(210, 95%, 25%);
   }
+  .projects-section__projects__project__desc {
+    font-size: 0.875rem;
+  }
 }
 @media screen and (max-width: 550px) {
   .projects-section__projects__project__btn__link-logo,
