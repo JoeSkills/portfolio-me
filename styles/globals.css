@@ -220,27 +220,33 @@ button:hover {
   align-items: center;
 
   background-color: hsl(210, 95%, 3%);
-  gap: 0.625rem;
+  gap: var(--space-between-section-child);
   padding: 2rem;
 }
 .projects-section__projects {
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
-  flex-wrap: wrap;
+  width: 60vw;
+  justify-content: center;
 }
 .projects-section__projects__project {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 30vw;
   gap: 0.625rem;
-  padding: 0.9375rem 0.625rem;
-  padding-bottom: 0.9375rem;
-  background-color: hsl(210, 95%, 10%);
+  padding: 0.625rem 0.625rem;
+  background-color: hsl(210, 95%, 8%);
   color: white;
   position: relative;
+  align-items: center;
+}
+.projects-section__projects__project__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0.5;
+  height: 100%;
+  gap: 0.9375rem;
 }
 .projects-section__projects__project__btn {
   display: flex;
@@ -262,6 +268,7 @@ button:hover {
 }
 .projects-section__projects__project__desc {
   text-align: center;
+  word-wrap: break-word;
 }
 .projects-section__projects__project__title {
   font-weight: 600;
@@ -272,8 +279,8 @@ button:hover {
   color: hsl(210, 80%, 50%);
 }
 .projects-section__projects__project__image {
-  width: 100%;
   height: 100%;
+  flex: 0.5;
 }
 .projects-section__tags {
   display: flex;
@@ -536,6 +543,7 @@ a:hover {
   }
 
   .projects-section__projects {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -548,6 +556,12 @@ a:hover {
     width: 50vw;
     gap: 0.625rem;
     padding: 0.625rem 0.625rem;
+    background-color: hsl(210, 95%, 10%);
+    color: white;
+    position: relative;
+  }
+  .projects-section__projects__project__wrapper {
+    gap: 0.625rem;
   }
   .projects-section__projects__project__btn {
     display: flex;

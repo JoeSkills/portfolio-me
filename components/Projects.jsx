@@ -77,33 +77,35 @@ const Projects = () => {
                   height="50"
                   className="projects-section__projects__project__image"
                 />
-                <span className="projects-section__projects__project__title">
-                  <a
-                    href={project.projectLink}
-                    className="projects-section__projects__project__title__link"
-                  >
-                    {project.title}
-                  </a>
-                </span>
-                <span className="projects-section__projects__project__desc">
-                  {project.description}
-                </span>
+                <div className="projects-section__projects__project__wrapper">
+                  <span className="projects-section__projects__project__title">
+                    <a
+                      href={project.projectLink}
+                      className="projects-section__projects__project__title__link"
+                    >
+                      {project.title}
+                    </a>
+                  </span>
+                  <span className="projects-section__projects__project__desc">
+                    {project.description}
+                  </span>
 
-                <div className="projects-section__projects__project__btn">
-                  <a
-                    className="projects-section__projects__project__btn__btn btn--live"
-                    href={project.projectLink}
-                  >
-                    <FiExternalLink className="projects-section__projects__project__btn__link-logo" />
-                    <span>Live Demo</span>
-                  </a>
-                  <a
-                    className="projects-section__projects__project__btn__btn btn--github"
-                    href={project.codeLink}
-                  >
-                    <FaGithub className="projects-section__projects__project__btn__github-logo" />
-                    <span>Github</span>
-                  </a>
+                  <div className="projects-section__projects__project__btn">
+                    <a
+                      className="projects-section__projects__project__btn__btn btn--live"
+                      href={project.projectLink}
+                    >
+                      <FiExternalLink className="projects-section__projects__project__btn__link-logo" />
+                      <span>Live Demo</span>
+                    </a>
+                    <a
+                      className="projects-section__projects__project__btn__btn btn--github"
+                      href={project.codeLink}
+                    >
+                      <FaGithub className="projects-section__projects__project__btn__github-logo" />
+                      <span>Github</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             );
