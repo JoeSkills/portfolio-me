@@ -145,11 +145,8 @@ button:hover {
   height: fit-content;
 }
 .about-section {
-  display: grid;
-  grid-template-areas:
-    'about about'
-    'about-desc my-img'
-    'github-button my-img';
+  display: flex;
+  flex-direction: column;
   padding: 2rem;
   justify-content: start;
   gap: 0.625rem;
@@ -159,26 +156,33 @@ button:hover {
 .heading.about {
   font-size: 1.25rem;
   font-weight: bold;
-  grid-area: about;
+}
+.about-section__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .about-body {
-  grid-area: about-desc;
-  width: 50vw;
+  display: flex;
+  gap: var(--space-between-section-child);
+  flex-direction: column;
+  justify-content: start;
+  height: 100%;
+
+  flex: 0.7;
 }
 .about-btn-github {
-  grid-area: github-button;
   width: fit-content;
   height: fit-content;
-  align-self: self-end;
+  font-size: 1rem;
 }
 .about-btn-github:hover {
   background-color: var(--secondary-button-color);
 }
 .my-img.about {
-  width: 100%;
-  height: 100%;
+  width: 30vw;
+  height: 30vw;
   border-radius: 50%;
-  grid-row: 1/4;
 }
 .skills-section {
   display: flex;
@@ -302,6 +306,9 @@ button:hover {
 .projects-section__title {
   font-weight: 600;
   font-size: 1.25rem;
+}
+.projects-section__projects__no-projects {
+  text-align: center;
 }
 .contact-section {
   display: flex;
@@ -463,9 +470,18 @@ a:hover {
     padding: 0.625rem;
     padding-block: 1rem;
   }
+  .about-section__wrapper {
+    flex-direction: column;
+    gap: var(--space-between-section-child);
+  }
+  .about-section__img-wrapper {
+    display: flex;
+    justify-content: center;
+  }
   .about-body {
     width: 100%;
     text-align: center;
+    flex: 1;
   }
   .about-btn-github {
     align-self: center;
